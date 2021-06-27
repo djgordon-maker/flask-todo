@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>My Todo List</title>
+</head>
+<body>
+	<nav>
+		<a id="all" href="{{ url_for('all_tasks') }}">All tasks</a>
+		<a id="incomplete" href="{{ url_for('incomplete_tasks') }}">Incomplete tasks</a>
+		<a id="create" href="{{ url_for('create_task') }}">Create task</a>
+		<a id="login" href="{{ url_for('login') }}">Log In</a>
+	</nav>
+    <h1>My Todo List</h1>
+    <h2>{% block subtitle %} {% endblock subtitle %}</h2>
+    {% block content %} {% endblock content %}
+</body>
+</html>
